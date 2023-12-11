@@ -30,7 +30,7 @@ const Navbar = () => {
     };
 
     return (
-        <AppBar sx={{ backgroundColor: '#000', color: '#ecf0f1' }} position="static">
+        <AppBar className='' sx={{ backgroundColor: '#000', color: '#ecf0f1' }} position="static">
             <Container maxWidth="xl">
                 <Toolbar className='flex justify-between' disableGutters>
                     <Stack direction="row">
