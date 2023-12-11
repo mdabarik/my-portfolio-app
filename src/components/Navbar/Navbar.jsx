@@ -13,7 +13,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Stack } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import BentoIcon from '@mui/icons-material/Bento';
 
 const pages = ['Home', 'Projects', 'About'];
@@ -31,7 +30,7 @@ const Navbar = () => {
     };
 
     return (
-        <AppBar sx={{ backgroundColor: '#2c3e50', color: '#ecf0f1' }} position="static">
+        <AppBar sx={{ backgroundColor: '#000', color: '#ecf0f1' }} position="static">
             <Container maxWidth="xl">
                 <Toolbar className='flex justify-between' disableGutters>
                     <Stack direction="row">
