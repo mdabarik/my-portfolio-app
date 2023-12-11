@@ -8,17 +8,16 @@ import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Banner = () => {
     return (
-        <Container maxWidth="xl">
-            <div className="w-[100%] overflow-hidden relative bg-gray-200 text-black h-[500px]">
 
-                <div className="h-full w-[90%] mx-auto flex justify-between items-center">
+        <div className="w-[100%] overflow-hidden flex items-center justify-center relative bg-gray-200 text-black h-[80vh] md:h-[500px]">
+            <Container maxWidth="xl">
+                <div className="h-full w-[100%] mx-auto flex flex-col-reverse md:flex-row justify-between items-center">
                     <div className="flex-1 relative z-50">
-                        <div>
-                            <h2 className="text-6xl font-bold">Hi, I'm Md. A. Barik</h2>
+                        <div className="">
+                            <h2 className="text-xl md:text-4xl lg:text-5xl font-bold">Hi, I'm Md. A. Barik</h2>
                             <div className="">
                                 <TypeAnimation
                                     sequence={[
-                                        // Same substring at the start will only be typed out once, initially
                                         'Front End Developer',
                                         1000,
                                         'ReactJS Developer',
@@ -28,9 +27,10 @@ const Banner = () => {
                                         'LeetCode Problem Solver',
                                         1000
                                     ]}
+                                    className="text-black text-2xl md:text-3xl lg:text-5xl py-2"
                                     wrapper="span"
                                     speed={50}
-                                    style={{ fontSize: '3em', display: 'inline-block', margin: '0px 0px' }}
+                                    style={{  display: 'inline-block', margin: '0px 0px' }}
                                     repeat={Infinity}
                                 />
                             </div>
@@ -56,12 +56,12 @@ const Banner = () => {
                     </div>
                     <div className="flex-1 relative">
                         <div className="h-full flex items-end justify-end">
-                            <img className="rounded-full w-[400px]" src={BannerProfile} alt="Md. A. Barik" />
+                            <img className="rounded-full w-[200px] md:w-[400px]" src={BannerProfile} alt="Md. A. Barik" />
                         </div>
                     </div>
                 </div>
-            </div>
-        </Container>
+            </Container>
+        </div >
     );
 };
 

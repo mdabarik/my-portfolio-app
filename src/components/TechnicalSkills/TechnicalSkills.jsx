@@ -15,6 +15,7 @@ import CLogo from "./../../assets/skills/cprogramming.png";
 import JavaLogo from "./../../assets/skills/java.png";
 import PythonLogo from "./../../assets/skills/python.png";
 import PostGreSQLLogo from "./../../assets/skills/postgresql.png";
+import VsCodeLogo from "./../../assets/skills/vscode.png";
 
 
 const TechnicalSkills = () => {
@@ -55,6 +56,10 @@ const TechnicalSkills = () => {
                         <img className='w-[100px]' src={ExpressLogo} alt="exress logo" />
                         <span className='text-center text-[10px] block'>express js</span>
                     </div>
+                    <div className='bg-[#4caf5030] w-fit p-2 rounded-lg'>
+                        <img className='w-[100px]' src={MongoDbLogo} alt="mongodb logo" />
+                        <span className='text-center text-[10px] block'>mongodb</span>
+                    </div>
                     <div className='bg-[#ffc40345] w-fit p-2 rounded-lg'>
                         <img className='w-[100px]' src={FirebaseLogo} alt="firebase logo" />
                         <span className='text-center text-[10px] block'>firebase</span>
@@ -67,9 +72,9 @@ const TechnicalSkills = () => {
                         <img className='w-[100px]' src={GitHubLogo} alt="github logo" />
                         <span className='text-center text-[10px] block'>github</span>
                     </div>
-                    <div className='bg-[#4caf5030] w-fit p-2 rounded-lg'>
-                        <img className='w-[100px]' src={MongoDbLogo} alt="mongodb logo" />
-                        <span className='text-center text-[10px] block'>mongodb</span>
+                    <div className='bg-[#0088d130] w-fit p-2 rounded-lg'>
+                        <img className='w-[100px]' src={VsCodeLogo} alt="vscode logo" />
+                        <span className='text-center text-[10px] block'>vs code</span>
                     </div>
                     <div className='bg-[#565f9f30] w-fit p-2 rounded-lg'>
                         <img className='w-[100px]' src={CLogo} alt="c logo" />
