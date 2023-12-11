@@ -24,15 +24,15 @@ const TechnicalSkills = () => {
             <Container maxWidth="xl">
                 <h2 className="text-3xl font-bold text-center mb-8">Technical <span className="text-[red]">Skills</span></h2>
                 <div className='flex flex-wrap gap-6 items-center justify-center'>
-                    <div className='bg-[#ff6f0130] w-fit p-2 rounded-lg'>
+                    <div className='bg-[#ff6f0130] w-fit p-2 rounded-lg animate-pulse'>
                         <img className='w-[100px]' src={HtmlLogo} alt="html logo" />
                         <span className='text-center text-[10px] block'>html</span>
                     </div>
-                    <div className='bg-[#0278bd30] w-fit p-2 rounded-lg'>
+                    <div className='bg-[#0278bd30] w-fit p-2 rounded-lg animate-pulse'>
                         <img className='w-[100px]' src={CssLogo} alt="css logo" />
                         <span className='text-center text-[10px] block'>css</span>
                     </div>
-                    <div className='bg-[#05acc130] w-fit p-2 rounded-lg'>
+                    <div className='bg-[#05acc130] w-fit p-2 rounded-lg animate-pulse'>
                         <img className='w-[100px]' src={TailwindLogo} alt="tailwind logo" />
                         <span className='text-center text-[10px] block'>tailwind css</span>
                     </div>
