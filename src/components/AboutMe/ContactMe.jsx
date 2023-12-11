@@ -1,0 +1,112 @@
+import { Container } from "@mui/material";
+import { useRef, useState } from "react";
+import { TiMessages } from "react-icons/ti";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { Toaster } from 'react-hot-toast';
+
+
+const ContactMe = () => {
+
+    const [name, setName] = useState(null);
+    const [email, setEmail] = useState(null);
+    const [subject, setSubject] = useState(null);
+    const [message, setMessage] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const form = useRef();
+
+
+    const handleMessage = (e) => {
+        setLoading(true);
+        e.preventDefault();
+        setError("");
+        if (!name || name.length < 2) {
+            setError("Name must be longer than 2 chars.");
+            setLoading(false)
+            return;
+        }
+        if (!email || !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
+            setError("Please enter a valid email address");
+            return;
+        }
+        if (!subject || subject.length < 6) {
+            setError("Subject must be longer than 6 chars.");
+            setLoading(false)
+            return;
+        }
+
+        if (!message || message.length < 20) {
+            setError("Message must be longer than 20 chars.");
+            setLoading(false)
+            return;
+        }
+
+
+        emailjs.sendForm('service_wqabwgr', 'template_zl4crh7', form.current, 'yCrwCtJnDPzXUlfJP')
+            .then((result) => {
+                toast.success("Message Sent Successfully.")
+                console.log(result);
+                setLoading(false)
+                form.current.reset();
+            }, (error) => {
+                toast.error("Something went wrong!")
+                console.log(error);
+                setLoading(false)
+            });
+    };
+
+
+    return (
+        <div className="my-10">
+            <Toaster />
+            <Container maxWidth="xl">
+                <h2 className="text-3xl font-bold text-center">Contact <span className="text-[red]">Me</span></h2>
+                <div className="w-[90%] mx-auto mt-5">
+                    <div className="flex justify-between items-center mt-14">
+                        <div className="flex-1">
+                            Contact information
+                        </div>
+                        <div className="flex-1">
+                            <div className="bg-[#ffcccc] text-[#3b3b3b] py-2 text-center mb-5">
+                                <h3 className="text-xl font-bold text-center">Fill Up Form to Send Message</h3>
+                            </div>
+                            <form ref={form} onSubmit={handleMessage} className="space-y-4">
+                                <div className="flex justify-between gap-4">
+                                    <input name="from_name" onChange={e => setName(e.target.value.trim())} className="w-full px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" type="text" placeholder="Your Name" />
+                                    <input name="user_email" onChange={e => setEmail(e.target.value.trim())} className="w-full px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" type="text" placeholder="Your Email" />
+                                    <input className="hidden" value="Md. A. Barik" type="text" name="to_name" id="to_name" />
+                                </div>
+                                <div>
+                                    <input name="reply_to" onChange={e => setSubject(e.target.value.trim())} className="w-full px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" type="text" placeholder="Subjects" />
+                                </div>
+                                <textarea name="message" onChange={e => setMessage(e.target.value.trim())} className="w-full  px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" name="message" placeholder="Enter your message" cols="30" rows="10"></textarea>
+
+
+                                {
+                                    loading ?
+                                        <button disabled className="bg-[red] hover:cursor-progress text-white py-3 rounded-xl w-full flex gap-2 justify-center items-center">
+                                            <span className="loading loading-bars loading-md text-white"></span>
+                                        </button>
+                                        :
+                                        <button type="submit" className="bg-[red] hover:bg-[#ce2121] text-white py-3 rounded-xl w-full flex gap-2 justify-center items-center">
+                                            <span className="uppercase">Send Message</span>
+                                            <TiMessages className="text-2xl"></TiMessages>
+                                        </button>
+                                }
+                            </form>
+                            {
+                                error ?
+                                    <div className="bg-blue-200 text-blue-800 px-4 text-center py-1 mt-2 rounded">
+                                        {error}
+                                    </div> : ""
+                            }
+                        </div>
+                    </div>
+                </div>
+            </Container >
+        </div >
+    );
+};
+
+export default ContactMe;

@@ -3,6 +3,7 @@ import BannerProfile from "./../../assets/profile.jpeg";
 import { FaDownload } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { TypeAnimation } from 'react-type-animation';
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 
 const Banner = () => {
@@ -47,6 +48,9 @@ const Banner = () => {
                                     <FaExternalLinkAlt></FaExternalLinkAlt>
                                     <span>View Resume</span>
                                 </a>
+                            </div>
+                            <div className="mt-3">
+                                <SocialLinks></SocialLinks>
                             </div>
                         </div>
                     </div>
