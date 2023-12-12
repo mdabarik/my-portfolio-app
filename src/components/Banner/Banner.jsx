@@ -9,7 +9,7 @@ import SocialLinks from "../SocialLinks/SocialLinks";
 const Banner = () => {
     return (
 
-        <div className="w-[100%] overflow-hidden flex items-center justify-center relative bg-gray-200 text-black h-[80vh] md:h-[500px]">
+        <div className="w-[100%] overflow-hidden flex items-center justify-center relative bg-gray-200 text-black h-[100vh] md:h-[500px]">
             <Container maxWidth="xl">
                 <div className="h-full w-[100%] mx-auto flex flex-col-reverse md:flex-row justify-between items-center">
                     <div className="flex-1 relative z-50">
@@ -39,7 +39,7 @@ const Banner = () => {
                                     I'm a dedicated front-end developer with a robust grasp of HTML5, CSS3, and JavaScript. Proficient in developing dynamic web applications using React, Express, Node.js, and MongoDB. I also share my knowledge by teaching programming and data structures on Udemy.
                                 </p>
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex flex-wrap gap-2">
                                 <a href="https://drive.google.com/uc?export=download&id=16LPKzBpudfSX4i92i85qwtPOMLsDFKc-" className="bg-[red] border-[2px] border-red-600 hover:bg-[#b01d1d] text-white px-6 py-3 text-sm rounded-full flex gap-2 uppercase" download>
                                     <FaDownload></FaDownload>
                                     <span>Download Resume</span>

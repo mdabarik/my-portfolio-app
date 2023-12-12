@@ -9,7 +9,7 @@ import LeetCodeLogo from "./../../assets/leetcode.webp";
 const SocialLinks = () => {
     return (
         <>
-            <div className="flex gap-2 items-center">
+            <div className="flex flex-wrap gap-2 items-center">
                 <a href="https://www.linkedin.com/in/md-a-barik/" className=" bg-[#cccccc] border-2 p-2 rounded-2xl">
                     <img className="object-cover w-[28px] h-[28px] hover:cursor-pointer" src={LinkedListLogo} alt="LinkedList" />
                 </a>

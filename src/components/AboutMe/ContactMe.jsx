@@ -4,7 +4,7 @@ import { TiMessages } from "react-icons/ti";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import { Toaster } from 'react-hot-toast';
-
+import ContactLogo from "./../../assets/skills/contact-me.jpg";
 
 const ContactMe = () => {
 
@@ -15,7 +15,6 @@ const ContactMe = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
     const form = useRef();
-
 
     const handleMessage = (e) => {
         setLoading(true);
@@ -42,7 +41,6 @@ const ContactMe = () => {
             return;
         }
 
-
         emailjs.sendForm('service_wqabwgr', 'template_zl4crh7', form.current, 'yCrwCtJnDPzXUlfJP')
             .then((result) => {
                 toast.success("Message Sent Successfully.")
@@ -58,14 +56,17 @@ const ContactMe = () => {
 
 
     return (
-        <div className="my-10">
+        <div className="my-10" id="contact-me-id">
             <Toaster />
             <Container maxWidth="xl">
                 <h2 className="text-3xl font-bold text-center">Contact <span className="text-[red]">Me</span></h2>
                 <div className="w-[90%] mx-auto mt-5">
                     <div className="flex flex-col md:flex-row justify-between mt-14">
                         <div className="flex-1 p-3">
-                            <h2 className="font-bold text-2xl uppercase ">Feel free to reach out</h2>
+                            <h2 className="font-bold text-2xl uppercase mb-6">Feel free to reach out</h2>
+                            <div className="h-[300px]">
+                                <img className="w-full h-[260px] object-cover rounded-2xl" src={ContactLogo} alt="logo contact me" />
+                            </div>
                             <p className="text-sm w-[80%]">Welcome to my contact hub! Whether you have questions, ideas, or just want to connect, I'm delighted to be at your service. Feel free to drop me a message anytime, and let's start a meaningful conversation.</p>
                             <div className="my-3">
                                 <p className="font-bold">Email: <a href="mailto:mdabarik19@gmail.com">mdabarik19@gmail.com</a></p>
@@ -73,7 +74,7 @@ const ContactMe = () => {
                             </div>
                         </div>
                         <div className="flex-1 border-[2px] rounded-lg p-3">
-                            <div className="bg-[#00000030] text-[white] py-2 text-center mb-5">
+                            <div className="bg-[#00000010] text-[white] py-2 text-center mb-5 rounded-full">
                                 <h3 className="text-xl text-black font-bold text-center uppercase">Fill Up Form to Send Message</h3>
                             </div>
                             <form ref={form} onSubmit={handleMessage} className="space-y-4">
@@ -85,7 +86,7 @@ const ContactMe = () => {
                                 <div>
                                     <input name="reply_to" onChange={e => setSubject(e.target.value.trim())} className="w-full px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" type="text" placeholder="Subjects" />
                                 </div>
-                                <textarea name="message" onChange={e => setMessage(e.target.value.trim())} className="w-full  px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700"  placeholder="Enter your message" cols="30" rows="10"></textarea>
+                                <textarea name="message" onChange={e => setMessage(e.target.value.trim())} className="w-full  px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" placeholder="Enter your message" cols="30" rows="10"></textarea>
 
 
                                 {
