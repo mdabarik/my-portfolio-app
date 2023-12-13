@@ -20,8 +20,8 @@ import VsCodeLogo from "./../../assets/skills/vscode.png";
 
 const TechnicalSkills = () => {
     return (
-        <div className='my-10 pt-[100vh] md:pt-[600px]' id="technical-skills-id">
-            <Container maxWidth="xl">
+        <div className='my-10 pt-[600px] lg:pt-[600px]' id="technical-skills-id">
+            <div className='max-w-[1280px] mx-auto'>
                 <h2 className="text-3xl font-bold text-center mb-8">Technical <span className="text-[red]">Skills</span></h2>
                 <div className='flex flex-wrap gap-6 items-center justify-center'>
                     <div className='bg-[#ff6f0130] w-fit p-2 rounded-lg animate-pulse'>
@@ -93,7 +93,7 @@ const TechnicalSkills = () => {
                         <span className='text-center text-[10px] block'>postgresql</span>
                     </div>
                 </div>
-            </Container>
+            </div>
         </div>
     );
 };

@@ -65,12 +65,12 @@ const ContactMe = () => {
                 <h2 className="text-3xl font-bold text-center">Contact <span className="text-[red]">Me</span></h2>
                 <div className="w-[90%] mx-auto mt-5">
                     <div className="flex flex-col md:flex-row justify-between mt-14 gap-2">
-                        <div className="flex-1 p-3 border-2 rounded-xl">
+                        <div className="flex-1 p-3 border-2 rounded-xl text-center">
                             <div className="h-[300px]">
                                 <Lottie className='w-full h-[250px] -ml-5' animationData={ContactNowLottie} loop={true} />
                                 {/* <img className="w-full h-[260px] object-cover rounded-2xl" src={ContactLogo} alt="logo contact me" /> */}
                             </div>
-                            <p className="text-sm w-[80%]">Welcome to my contact hub! Whether you have questions, ideas, or just want to connect, I'm delighted to be at your service. Feel free to drop me a message anytime, and let's start a meaningful conversation.</p>
+                            <p className="text-sm w-[80%] mx-auto">Welcome to my contact hub! Whether you have questions, ideas, or just want to connect, I'm delighted to be at your service. Feel free to drop me a message anytime, and let's start a meaningful conversation.</p>
                             <div className="my-3">
                                 <p className="font-bold">Email: <a href="mailto:mdabarik19@gmail.com">mdabarik19@gmail.com</a></p>
                                 <p className="font-bold">Phone: <a href="call:+8801330759741">+8801330759741</a></p>
