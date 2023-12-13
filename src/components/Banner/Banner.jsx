@@ -7,6 +7,7 @@ import Lottie from "lottie-react";
 import CodingIcon from "./../../assets/lotties/codingLive.json";
 import BannerLogoLottie from "./../../assets/lotties/banner-bg.json";
 import BannerImg from "./../../assets/banner.png";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -56,14 +57,14 @@ const Banner = () => {
                                 </p>
                             </div>
                             <div className="flex flex-wrap gap-2">
-                                <a href="https://drive.google.com/uc?export=download&id=16LPKzBpudfSX4i92i85qwtPOMLsDFKc-" className="bg-[red] border-[2px] hover:border-[#b01d1d] border-red-600 hover:bg-[#b01d1d] text-white px-6 py-3 text-sm rounded-full flex gap-2 uppercase" download>
+                                <Link to="https://drive.google.com/uc?export=download&id=16LPKzBpudfSX4i92i85qwtPOMLsDFKc-" className="bg-[red] border-[2px] hover:border-[#b01d1d] border-red-600 hover:bg-[#b01d1d] text-white px-6 py-3 text-sm rounded-full flex gap-2 uppercase">
                                     <FaDownload></FaDownload>
                                     <span>Download Resume</span>
-                                </a>
-                                <a href="https://drive.google.com/file/d/16LPKzBpudfSX4i92i85qwtPOMLsDFKc-/view?usp=sharing" className="bg-[white] border-[2px] hover:border-none hover:cursor-pointer border-red-600 hover:bg-red-600 hover:text-white text-black px-6 py-3 text-sm rounded-full flex gap-2 uppercase">
+                                </Link>
+                                <Link rel="noopener noreferrer" target="_blank" to="https://drive.google.com/file/d/16LPKzBpudfSX4i92i85qwtPOMLsDFKc-/view?usp=sharing" className="bg-[white] border-[2px] hover:border-none hover:cursor-pointer border-red-600 hover:bg-red-600 hover:text-white text-black px-6 py-3 text-sm rounded-full flex gap-2 uppercase">
                                     <FaExternalLinkAlt></FaExternalLinkAlt>
                                     <span>View Resume</span>
-                                </a>
+                                </Link>
                             </div>
                             <div className="mt-3">
                                 <SocialLinks></SocialLinks>
