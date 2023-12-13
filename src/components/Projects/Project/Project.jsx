@@ -1,4 +1,5 @@
 import { IoCodeSlash, IoEye } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 // const lists = ["User can add product and authentication system", "Moderator can review product, User can add product and authentication system, User can add product and authentication system", "normal user can pay using stripe to post more than 1 product"]
 
@@ -23,18 +24,18 @@ const Project = ({img, title, live, client, server, lists, technologies}) => {
                     <p><span className="font-bold">Technologies:</span> {technologies}</p>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
-                    <a href={client} className="bg-red-700 hover:cursor-pointer border-[2px] items-center justify-center text-white px-6 py-2 rounded-full flex gap-2 uppercase">
+                    <Link rel="noopener noreferrer" target="_blank" to={client} className="bg-red-700 hover:cursor-pointer border-[2px] items-center justify-center text-white px-6 py-2 rounded-full flex gap-2 uppercase">
                         <span>Client</span>
                         <IoCodeSlash className="text-xl"></IoCodeSlash>
-                    </a>
-                    <a href={server} className="bg-[blue] hover:cursor-pointer border-[2px] items-center justify-center text-white px-6 py-2 rounded-full flex gap-2 uppercase">
+                    </Link>
+                    <Link rel="noopener noreferrer" target="_blank" to={server} className="bg-[blue] hover:cursor-pointer border-[2px] items-center justify-center text-white px-6 py-2 rounded-full flex gap-2 uppercase">
                         <span>Server</span>
                         <IoCodeSlash className="text-lg"></IoCodeSlash>
-                    </a>
-                    <a href={live} className="bg-[orangered] hover:cursor-pointer border-[2px] items-center justify-center text-white px-6 py-2 rounded-full flex gap-2 uppercase">
+                    </Link>
+                    <Link rel="noopener noreferrer" target="_blank" to={live} className="bg-[orangered] hover:cursor-pointer border-[2px] items-center justify-center text-white px-6 py-2 rounded-full flex gap-2 uppercase">
                         <span>Live</span>
                         <IoEye className="text-xl"></IoEye>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
