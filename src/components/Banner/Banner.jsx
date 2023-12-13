@@ -1,16 +1,28 @@
-import { Container } from "@mui/material";
 import BannerProfile from "./../../assets/profile.jpeg";
 import { FaDownload } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { TypeAnimation } from 'react-type-animation';
 import SocialLinks from "../SocialLinks/SocialLinks";
-
+import Lottie from "lottie-react";
+import flowerLottie from "./../../assets/lotties/banner-bg.json";
+// import CodingIcon from "./../../assets/lotties/profile-me.json";
+import CodingIcon from "./../../assets/lotties/codingLive.json";
 
 const Banner = () => {
     return (
 
-        <div className="w-[100%] overflow-hidden flex items-center justify-center relative bg-gray-200 text-black h-[100vh] md:h-[500px]">
-            <Container maxWidth="xl">
+        <div className="w-[100%] text-white overflow-hidden flex items-center justify-center absolute z-20 top-0 left-0 h-[100vh]  mb-[100vh] md:mb-[100vh] md:h-[580px] pt-5">
+            {/* bg animation */}
+            <div>
+                <Lottie className='w-[100vw] absolute z-10 top-0 left-0' animationData={flowerLottie} loop={true} />
+            </div>
+            {/* <div>
+                <Lottie className='w-[100vw] absolute z-10 top-0 left-0' animationData={banner2} loop={true} />
+            </div> */}
+            {/* overlay */}
+            <div className="w-[100vw] bg-[#00000090] z-20 absolute top-0 left-0 h-[100vh]"></div>
+
+            <div className="max-w-[1280px] mx-auto">
                 <div className="h-full w-[100%] mx-auto flex flex-col-reverse md:flex-row justify-between items-center">
                     <div className="flex-1 relative z-50">
                         <div className="">
@@ -27,10 +39,10 @@ const Banner = () => {
                                         'LeetCode Problem Solver',
                                         1000
                                     ]}
-                                    className="text-black text-2xl md:text-3xl lg:text-5xl py-2"
+                                    className="text-2xl md:text-3xl lg:text-5xl py-2"
                                     wrapper="span"
                                     speed={50}
-                                    style={{  display: 'inline-block', margin: '0px 0px' }}
+                                    style={{ display: 'inline-block', margin: '0px 0px' }}
                                     repeat={Infinity}
                                 />
                             </div>
@@ -54,13 +66,16 @@ const Banner = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex-1 relative">
+                    <div className="flex-1 relative z-20">
                         <div className="h-full flex items-end justify-end">
-                            <img className="rounded-full w-[200px] md:w-[400px]" src={BannerProfile} alt="Md. A. Barik" />
+                            {/* <img className="rounded-full w-[200px] md:w-[400px]" src={BannerProfile} alt="Md. A. Barik" /> */}
+                            <div>
+                                <Lottie className='w-[500px] -mt-20 h-[500px] rounded-full' animationData={CodingIcon} loop={true} />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </Container>
+            </div>
         </div >
     );
 };

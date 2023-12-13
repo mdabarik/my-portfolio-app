@@ -1,134 +1,60 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import { Stack } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import BentoIcon from '@mui/icons-material/Bento';
-import NavLinks from '../NavLinks/NavLinks';
-import NavMobile from '../NavLinks/NavMobile';
+import { Link } from 'react-router-dom';
+import Lottie from "lottie-react";
+import flowerLottie from "./../../assets/lotties/flower.json";
 
-const pages = ['Home', 'Projects', 'About'];
 
 const Navbar = () => {
     const [mode, setMode] = React.useState("light");
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+    const navlinks = <>
+        <li className='uppercase'>
+            <a href="/#projects-id">Projects</a>
+        </li>
+        <li className='uppercase'>
+            <a href="/#contact-me-id">Contact Me</a>
+        </li>
+    </>
 
     return (
-        <div id="home-id">
-            <AppBar className='' sx={{ backgroundColor: '#000', color: '#ecf0f1' }} position="static">
-                <Container maxWidth="xl">
-                    <Toolbar className='flex justify-between' disableGutters>
-                        <Stack direction="row">
-                            <BentoIcon sx={{ fontSize: '30px', display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                            <Typography
-                                variant="h6"
-                                noWrap
-                                component="a"
-                                href="#app-bar-with-responsive-menu"
-                                sx={{
-                                    mr: 2,
-                                    ml: 2,
-                                    display: { xs: 'none', md: 'flex' },
-                                    fontFamily: 'monospace',
-                                    fontWeight: 700,
-                                    // letterSpacing: '.3rem',
-                                    color: 'inherit',
-                                    textDecoration: 'none',
-                                }}
-                            >
-                                <p className='text-sm md:text-lg'>Md. A. Barik - Portfolio</p>
-                            </Typography>
-                        </Stack>
-
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                            <IconButton
-                                size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
-                                aria-haspopup="true"
-                                onClick={handleOpenNavMenu}
-                                color="inherit"
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                    display: { xs: 'block', md: 'none' },
-                                }}
-                            >
-                                {/* {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page}</Typography>
-                                    </MenuItem>
-                                ))} */}
-
-                                <div className='p-4'>
-                                    <NavMobile></NavMobile>
-                                </div>
-
-
-                            </Menu>
-                        </Box>
-                        {/* <BentoIcon sx={{ fontSize: '30px', display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            // href="#app-bar-with-responsive-menu"
-                            sx={{
-                                mr: 2,
-                                ml: 2,
-                                display: { xs: 'flex', md: 'none' },
-                                flexGrow: 1,
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                color: 'inherit',
-                                textDecoration: 'none',
-                            }}
-                        >
-                            <p className='text-sm md:text-lg'>Md. A. Barik - Portfolio</p>
-                        </Typography>
-
-
-                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-
-                            <NavLinks></NavLinks>
-
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
+        <div id="home-id" className='text-white'>
+            <div className="drawer absolute top-0 left-0 z-50">
+                <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content flex flex-col">
+                    {/* Navbar */}
+                    <div className="w-full py-4 max-w-[1280px] mx-auto flex justify-between items-center">
+                        <div className="flex-none lg:hidden">
+                            <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                            </label>
+                        </div>
+                        <div className="flex-1">
+                            <Link to="/" className='font-bold text-left flex items-center justify-start'>
+                                <Lottie className='w-[100px] -ml-5' animationData={flowerLottie} loop={true} />
+                                <span className='text-2xl uppercase'>Portfolio</span>
+                            </Link>
+                        </div>
+                        <div className="flex-none hidden lg:block">
+                            <ul className="menu menu-horizontal">
+                                {/* Navbar menu content here */}
+                                {
+                                    navlinks
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    {/* Page content here */}
+                </div>
+                <div className="drawer-side fixed z-50">
+                    <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
+                    <ul className="menu p-4 w-80 min-h-full bg-base-200 fixed z-50">
+                        {/* Sidebar content here */}
+                        {navlinks}
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 }

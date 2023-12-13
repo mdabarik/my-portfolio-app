@@ -5,6 +5,9 @@ import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import { Toaster } from 'react-hot-toast';
 import ContactLogo from "./../../assets/skills/contact-me.jpg";
+import ContactMeLottie from "./../../assets/lotties/contact-me.json";
+import Lottie from "lottie-react";
+import ContactNowLottie from "./../../assets/lotties/contact-now.json";
 
 const ContactMe = () => {
 
@@ -61,11 +64,11 @@ const ContactMe = () => {
             <Container maxWidth="xl">
                 <h2 className="text-3xl font-bold text-center">Contact <span className="text-[red]">Me</span></h2>
                 <div className="w-[90%] mx-auto mt-5">
-                    <div className="flex flex-col md:flex-row justify-between mt-14">
-                        <div className="flex-1 p-3">
-                            <h2 className="font-bold text-2xl uppercase mb-6">Feel free to reach out</h2>
+                    <div className="flex flex-col md:flex-row justify-between mt-14 gap-2">
+                        <div className="flex-1 p-3 border-2 rounded-xl">
                             <div className="h-[300px]">
-                                <img className="w-full h-[260px] object-cover rounded-2xl" src={ContactLogo} alt="logo contact me" />
+                                <Lottie className='w-full h-[250px] -ml-5' animationData={ContactNowLottie} loop={true} />
+                                {/* <img className="w-full h-[260px] object-cover rounded-2xl" src={ContactLogo} alt="logo contact me" /> */}
                             </div>
                             <p className="text-sm w-[80%]">Welcome to my contact hub! Whether you have questions, ideas, or just want to connect, I'm delighted to be at your service. Feel free to drop me a message anytime, and let's start a meaningful conversation.</p>
                             <div className="my-3">
@@ -74,8 +77,9 @@ const ContactMe = () => {
                             </div>
                         </div>
                         <div className="flex-1 border-[2px] rounded-lg p-3">
-                            <div className="bg-[#00000010] text-[white] py-2 text-center mb-5 rounded-full">
-                                <h3 className="text-xl text-black font-bold text-center uppercase">Fill Up Form to Send Message</h3>
+                            <div className="bg-[#] text-[white] py-2 text-center mb-3 rounded-full">
+                                {/* <h3 className="text-xl text-black font-bold text-center uppercase">Fill Up Form to Send Message</h3> */}
+                                <Lottie className='w-full h-[150px]' animationData={ContactMeLottie} loop={true} />
                             </div>
                             <form ref={form} onSubmit={handleMessage} className="space-y-4">
                                 <div className="flex justify-between gap-4">
@@ -86,7 +90,7 @@ const ContactMe = () => {
                                 <div>
                                     <input name="reply_to" onChange={e => setSubject(e.target.value.trim())} className="w-full px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" type="text" placeholder="Subjects" />
                                 </div>
-                                <textarea name="message" onChange={e => setMessage(e.target.value.trim())} className="w-full  px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" placeholder="Enter your message" cols="30" rows="10"></textarea>
+                                <textarea name="message" onChange={e => setMessage(e.target.value.trim())} className="w-full  px-3 py-2 border-2 rounded-xl outline-[red] border-grey-700" placeholder="Enter your message" cols="30" rows="6"></textarea>
 
 
                                 {

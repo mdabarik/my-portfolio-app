@@ -3,7 +3,7 @@ import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Footer = () => {
     return (
-        <div className="bg-black text-white flex flex-col items-center justify-center text-clip w-full h-[300px] space-y-5">
+        <div className="bg-blue-200 text-black flex flex-col items-center justify-center text-clip w-full h-[300px] space-y-5">
             <div>
                 <NavLinks></NavLinks>
             </div>
