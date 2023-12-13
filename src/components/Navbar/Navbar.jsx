@@ -11,10 +11,10 @@ const Navbar = () => {
 
     const navlinks = <>
         <li className='uppercase'>
-            <a href="/#projects-id">Projects</a>
+            <a href="/#projects">Projects</a>
         </li>
         <li className='uppercase'>
-            <a href="/#contact-me-id">Contact Me</a>
+            <a href="/#contact-me">Contact Me</a>
         </li>
     </>
 
