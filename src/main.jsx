@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from './pages/Home/ErrorPage/ErrorPage';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}>
-      <Main></Main>
+        <Main></Main>
     </RouterProvider>
   </React.StrictMode>,
 )

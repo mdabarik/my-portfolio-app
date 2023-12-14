@@ -5,11 +5,10 @@ import Projects from "../../components/Projects/Projects";
 import TechnicalSkills from "../../components/TechnicalSkills/TechnicalSkills";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowUp } from "react-icons/fa";
-import Scroll, { Events, scrollSpy } from 'react-scroll';
+import Snowfall from "react-snowfall";
 
 
 const Home = () => {
-
 
 
     return (
@@ -18,6 +17,10 @@ const Home = () => {
             <TechnicalSkills></TechnicalSkills>
 
             <Projects></Projects>
+
+            <div className="fixed top-0 left-0 z-0" style={{ height: '100vh', width: '100vw', background: 'transparent' }}>
+                <Snowfall color="orange"   snowflakeCount={80} />
+            </div>
 
             <ContactMe></ContactMe>
             <Footer></Footer>

@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Project = ({img, title, live, client, server, lists, technologies}) => {
     return (
-        <div className="drop-shadow-xl bg-white border-[2px] rounded-xl flex flex-col md:flex-row p-4 w-[90%] lg:w-full mx-auto">
-            <div className="h-[350px] rounded-xl overflow-hidden border-b-slate-200 border-b-[2px] flex-1">
+        <div className="drop-shadow-xl bg-[#ffffff90] border-[2px] rounded-xl flex flex-col md:flex-row p-4 w-[90%] lg:w-full mx-auto">
+            <div className="h-[350px] relative z-0 rounded-xl overflow-hidden border-b-slate-200 border-b-[2px] flex-1">
                 <img className="rounded-xl h-full object-cover w-full border-[2px] border-[#e7e6e6]" src={img} alt="image one" />
             </div>
             <div className="py-4 space-y-4 px-[15px] flex-1">

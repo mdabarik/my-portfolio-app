@@ -60,7 +60,7 @@ const ContactMe = () => {
 
 
     return (
-        <div className="my-10" id="contact-me">
+        <div className="my-10 relative z-20" id="contact-me">
             <Toaster />
             <Container maxWidth="xl">
                 <h2 className="text-3xl font-bold text-center">Contact <span className="text-[red]">Me</span></h2>
