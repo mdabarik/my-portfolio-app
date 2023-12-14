@@ -19,9 +19,9 @@ const Home = () => {
 
             <Projects></Projects>
 
-            <div className="fixed top-0 left-0 z-0" style={{ height: '100vh', width: '100vw', background: 'transparent' }}>
+            {/* <div className="fixed top-0 left-0 z-0" style={{ height: '100vh', width: '100vw', background: 'transparent' }}>
                 <Snowfall color="orange"   snowflakeCount={80} />
-            </div>
+            </div> */}
 
             <ContactMe></ContactMe>
 
