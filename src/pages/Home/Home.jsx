@@ -24,7 +24,7 @@ const Home = () => {
 
             <ContactMe></ContactMe>
             <Footer></Footer>
-            <div>
+            <div className="fixed z-50">
                 <ScrollToTop smooth component={<FaArrowUp className="drop-shadow-xl text-[#231f6f] flex items-center justify-center w-full bg-[]  text-2xl" ></FaArrowUp>} />
             </div>
         </div>

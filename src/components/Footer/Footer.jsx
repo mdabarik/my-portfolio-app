@@ -3,7 +3,7 @@ import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Footer = () => {
     return (
-        <div className="bg-[#05050595] text-white relative z-20 flex flex-col items-center justify-center text-clip w-full h-[300px] space-y-5">
+        <div className="bg-[#808080de] text-white relative z-20 flex flex-col items-center justify-center text-clip w-full h-[300px] space-y-5">
             <div className="list-none flex flex-wrap gap-4">
                 <NavScrolLinks></NavScrolLinks>
             </div>
