@@ -20,7 +20,7 @@ import VsCodeLogo from "./../../assets/skills/vscode.png";
 
 const TechnicalSkills = () => {
     return (
-        <div className='my-10 pt-[600px] lg:pt-[600px]' id="technical-skills-id">
+        <div className='my-10 pt-[600px] lg:pt-[600px]' id="technical-skills">
             <div className='max-w-[1280px] mx-auto'>
                 <h2 className="text-3xl font-bold text-center mb-8">Technical <span className="text-[red]">Skills</span></h2>
                 <div className='flex flex-wrap gap-6 items-center justify-center'>

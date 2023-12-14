@@ -1,21 +1,20 @@
 import * as React from 'react';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import { Link } from 'react-router-dom';
 import Lottie from "lottie-react";
 import flowerLottie from "./../../assets/lotties/flower.json";
+import Scroll, { Events, scrollSpy } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import NavScrolLinks from './NavScrolLinks';
+
+
 
 
 const Navbar = () => {
     const [mode, setMode] = React.useState("light");
 
     const navlinks = <>
-        <li className='uppercase'>
-            <a href="/#projects">Projects</a>
-        </li>
-        <li className='uppercase'>
-            <a href="/#contact-me">Contact Me</a>
-        </li>
+        <NavScrolLinks></NavScrolLinks>
     </>
 
     return (
@@ -49,7 +48,7 @@ const Navbar = () => {
                 </div>
                 <div className="drawer-side fixed z-50">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 min-h-full bg-base-200 fixed z-50">
+                    <ul className="menu p-4 w-80 min-h-full bg-white text-black fixed z-50">
                         {/* Sidebar content here */}
                         {navlinks}
                     </ul>

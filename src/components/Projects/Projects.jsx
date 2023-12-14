@@ -1,4 +1,3 @@
-import { Container } from "@mui/material";
 import Project1Image1 from "./../../assets/project1-screenshot1.png";
 import Project from "./Project/Project";
 import Project2Image1 from "./../../assets/hotel-booking-1.png";
@@ -27,8 +26,8 @@ const Projects = () => {
     const technologies3 = "React, React Router Dom, Tailwind, DaisyUi, MUI, ExpressJS, Firebase, Stripe and many other npm package."
 
     return (
-        <div className="max-w-[1280px] mx-auto">
-            <div id="projects-id">
+        <div className="max-w-[1280px] mx-auto" id="projects">
+            <div>
                 <h2 className="text-3xl font-bold text-center">My <span className="text-[red]">Projects</span></h2>
                 <div className="my-4">
                     <div className="grid grid-cols-1 gap-6">
